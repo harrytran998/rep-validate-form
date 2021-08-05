@@ -1,0 +1,36 @@
+{
+  "name": "template-typescript",
+  "description": "Template for all project using typescript",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "app/*"
+  ],
+  "engines": {
+    "node": ">=14.16.0"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "scripts": {
+    "dev": "yarn workspace @rep/web run dev",
+    "build:web": "yarn workspace @rep/web run build",
+    "build:utils": "yarn workspace @rep/utils run build",
+    "build:ui": "yarn workspace @rep/ui run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.2",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.1.8",
+    "rimraf": "^3.0.2",
+    "tsup": "^4.12.5",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.3"
+  }
+}
